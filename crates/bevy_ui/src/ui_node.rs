@@ -193,8 +193,8 @@ impl Val {
 ///
 /// **Note:** Bevy's UI is upside down compared to how Flexbox normally works, to stay consistent with engine paradigms about layouting from
 /// the upper left corner of the display
-#[derive(Component, Clone, PartialEq, Debug, Reflect)]
-#[reflect(Component, Default, PartialEq)]
+#[derive(Component, Clone, PartialEq, Debug, Reflect, Serialize, Deserialize)]
+#[reflect(Component, Default, PartialEq, Serialize, Deserialize)]
 pub struct Style {
     /// Whether to arrange this node and its children with flexbox layout
     ///
